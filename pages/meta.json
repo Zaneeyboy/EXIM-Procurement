@@ -1,7 +1,8 @@
 {
-  "index": "Introduction",
-  "get-started": "Get Started",
-  "features": "Features",
-  "themes": "Themes",
-  "advanced": "Advanced"
+  "index": "Getting Started",
+  "changelog":"Changelog",
+  "vendor":"Vendor Process",
+  "purchase-requisition":"Purchase Requisition Process",
+  "purchase-order":"Purchase Order Process"
+  
 }

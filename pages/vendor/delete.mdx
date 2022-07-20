@@ -1,0 +1,29 @@
+## Delete Vendor Option (Selected)
+
+When this operation is selected, the user will be navigated to a task form with a single _Vendor_ field.
+This field is a dropdown menu from which, the user must select a vendor from the listing of available vendors.
+
+When a vendor is selected and the form is submitted, all information pertaining to the selected vendor is retrieved from the
+database and populated into fields for viewing purposes only.
+
+The user at this point has the option to delete the vendor from the database, select another vendor or end the process without deleting any records from the database.
+
+- Should the user choose to delete the vendor's details, the relevant vendor fields in the database will be made unavailable to the _Procurement Process_ from this point onward.
+- Should another vendor be selected, the same process will take place where the relevant records for the newly selected vendor will be retrieved from the database and populated into the relevant fields for the user to view _delete_ should they choose
+
+A listing of all relevant fields for this operation are given below:
+
+| Field Name        | Description                                                                                         | Mandatory |
+| ----------------- | --------------------------------------------------------------------------------------------------- | --------- |
+| Vendor            | This is a dropdown of all available Vendor records in the database that can be updated.             | Yes       |
+| Vendor ID         | The unique ID used to identify a vendor in the database.                                            | No        |
+| Vendor Name       | Name of vendor                                                                                      | No        |
+| Vendor Email      | Vendor email address                                                                                | No        |
+| Contact Person    | Contact person                                                                                      | No        |
+| Designation       | Contact person designation                                                                          | No        |
+| Phone Number 1    | Vendor phone number                                                                                 | No        |
+| Phone Number 2    | Vendor phone number                                                                                 | No        |
+| Vendor Address    | Vendor Address                                                                                      | No        |
+| FAX               | Vendor FAX                                                                                          | No        |
+| Prequalified      | This field indicates whether or not this Vendor has passed all of EXIM Bank's criteria for vendors. | No        |
+| Vendor Categories | This field is a table containing all categories this particular vendor falls under.                 | No        |

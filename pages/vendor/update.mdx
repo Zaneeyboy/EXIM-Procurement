@@ -1,0 +1,26 @@
+## Update Vendor Details Option (Selected)
+
+When this operation is selected, the user will be navigated to a task form with a single _Vendor_ field.
+This field is a dropdown menu from which, the user must select a vendor from the listing of available vendors.
+
+When a vendor is selected and the form is submitted, all information pertaining to the selected vendor is retrieved from the database and populated into fields.
+The user then has the ability to make changes to any of the fields listed, including the _Vendor Categories Table_.
+
+When all updates are made and submitted in the form, all relevant changes and updates to the fields will be made to the corresponding database records.
+
+A listing of all relevant fields for this operation are given below:
+
+| Field Name        | Description                                                                                         | Mandatory |
+| ----------------- | --------------------------------------------------------------------------------------------------- | --------- |
+| Vendor            | This is a dropdown of all available Vendor records in the database that can be updated.             | Yes       |
+| Vendor ID         | The unique ID used to identify a vendor in the database.                                            | No        |
+| Vendor Name       | Name of vendor                                                                                      | Yes       |
+| Vendor Email      | Vendor email address                                                                                | Yes       |
+| Contact Person    | Contact person                                                                                      | Yes       |
+| Designation       | Contact person designation                                                                          | Yes       |
+| Phone Number 1    | Vendor phone number                                                                                 | Yes       |
+| Phone Number 2    | Vendor phone number                                                                                 | No        |
+| Vendor Address    | Vendor Address                                                                                      | Yes       |
+| FAX               | Vendor FAX                                                                                          | Yes       |
+| Prequalified      | This field indicates whether or not this Vendor has passed all of EXIM Bank's criteria for vendors. | Yes       |
+| Vendor Categories | This field is a table containing all categories this particular vendor falls under.                 | Yes       |

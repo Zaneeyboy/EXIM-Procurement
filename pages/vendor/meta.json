@@ -1,0 +1,8 @@
+{
+    "index":"Getting Started",
+    "add":"Add New Vendor",
+    "update":"Update Vendor Details",
+    "view":"View Vendor Details",
+    "delete":"Delete Vendor",
+    "fields": "Process Data Fields"
+}
