@@ -1,1 +1,26 @@
-Purchase Requisition
+# Purchase Requisition Process Documentation
+
+### Users
+
+All users with access to E-Flow should have access to initiate this process and have the ability to create a purchase requisition.
+
+### Starting a purchase requisition
+
+When the process is initiated, the user is navigated to a task form with the following fields:
+
+| Field                        | Description                                                                                                 | Mandatory |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- | --------- |
+| PR Date                      | Date of the purchase requisition                                                                            | No        |
+| PR Number                    | Unique ID of purchase requisition                                                                           | No        |
+| Requested By                 | Name of individual initiating the purchase requisition process                                              | No        |
+| Requesting Department        | A dropdown of all departments from which, the requester must select their department                        | Yes       |
+| Date Reqired                 | The due date for submission of all applicable quotations from vendors sent a RFQ Document                   | Yes       |
+| Operating Expenses: Budgeted | A radio-button field to indicate if this purchase requisition was budgeted for                              | Yes       |
+| Item Table                   | A table detailing the items required by the requester as well as expected cost information for procurement. | Yes       |
+| Purpose for Request          | An explaination for the creation of this purchase requisition                                               | Yes       |
+| Comments                     | A log of all comments made by individuals at various stages along the process                               | No        |
+
+#### Form Options
+
+- Submit to Manager - After each of the fields have been populated and the form submitted, the process will be passed on to the manager for review before it moves forward.
+- Cancel - The process ends at this point.

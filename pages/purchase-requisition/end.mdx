@@ -1,0 +1,33 @@
+## Ending the Purchase Requisition Process
+
+### Users
+
+All approved Procurement Officers with access to E-Flow should have access to this part of the process.
+
+### Ending the process
+
+Once a request for quotation is sent, whether it be via email, or manually sending the RFQ, the system will internally check to determine if all items in the _Item Table_ of the Purchase Requisition have been sent in a request for quotation.
+
+If all items have been sent, then a form with read only access will be displayed to the user where they will have two options:
+
+1. Send another RFQ - If this option is selected, the user will go back through the process of creating and sending a RFQ with any subset of the items falling under a particular category, to any subset of Vendors likewise falling under the selected category, as seen previously.
+2. End RFQ Process - This will end the purchase requisition process and at this point, the database has been fully updated with all information pertaining to this newly created purchase requisition.
+
+If all items have not been sent in a request for quotation, the system will automatically navigate to the start of the creation of a request for quotation. This is where a category will again have to be selected to begin the process of selecting vendors, items and the method of sending the RFQ Document once more.
+The user can cancel the process at this point, however, if not all items have been sent in a Request for Quotation, then cancellation of the process will result in these items being omitted from other parts of the procurement process, since they have not been sent to vendors for quotations. Thus, the database records will not
+contain any trace of the omitted items being sent out in requests for quotations, resulting in the omitted items becoming invisible to the system at later points of the process.
+
+**Therefore, it is imortant to note that an item not sent in a request for quotation will be unavailable for the system to retrieve data from at later parts where the purchase order, quotation analysis and invoicing sub-processes are concerned.**
+
+#### Form Options
+
+- Approve : Once Finance approves the form, the process is passed on to the office of procurement for review.
+- Reject To Manager : The process is passed back to the Manager with comments indicating what needs to be changed before the purchase requisition can be approved.
+- Cancel : This will end the process at this point.
+
+#### Mandatory fields
+
+| Field    | Description                                                                                                                                                                                     |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Comments | Comments are required so that other individuals in the process can also be informed of any issues or changes that have taken place since the urchase requisition was created.                   |
+| Account  | This field is a dropdown menu of all accounts. An account must be selected to act as the source of funds for the payment of items ordered in a purchase order document later on in the process. |

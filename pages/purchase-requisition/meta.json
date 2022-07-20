@@ -1,3 +1,11 @@
 {
-    "index":"Starting a Requisition"
+    "index":"Starting a Requisition",
+    "manager":"Manager Review",
+    "finance":"Finance Review",
+    "procurement":"Procurement Review",
+    "rfq":"Creating a Request for Quotation",
+    "send":"Sending a Request for Quotation",
+    "end":"Ending the process",
+    "fields":"Data Fields"
+
 }

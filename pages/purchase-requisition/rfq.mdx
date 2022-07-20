@@ -1,0 +1,51 @@
+## Creating a Request for Quotation
+
+### Users
+
+All approved Procurement Officers with access to E-Flow should have access to this part of the process.
+
+#### Creating a request for quotation
+
+At this stage, the Procurement Officer has approved the purchase requisition, indicating that all details pertaining to the purchase requisition is acceptable and a request for quotation
+can now be created.
+
+To create a request for quotation, a category must first be selected from the **Category** field. This field is a listing of all categories that were selected for the items
+listed in the **Item Table** of the purchase requisition. Once a category is selected, the user must click on the **Get Relevant Data** button at the bottom of the form to proceed with the process.
+
+**Mandatory Fields**
+
+| Field    | Description                                                                                                   |
+| -------- | ------------------------------------------------------------------------------------------------------------- |
+| Category | This field is a dropdown listing of all categories that were selected for the various items in the Item Table |
+
+At this point, all data corresponding to the category selected are being retrieved from the database and stored in various fields that will be used in generating the request for quotation document and sending the request for quotation to applicable vendors.
+Two of these such fields are:
+
+- RFQ Vendors Table
+  : This table contains a dropdown field listing all vendors with the selected category. Vendors selected in this table will be sent the request for quotation.
+
+- RFQ Items Table
+  : This table contains a listing of all items with the selected category from our items in the **Item Table** of our purchase requisition. Only those items you wish to be sent to a vendor or a particular group of vendors should be selected in this table.
+
+**Important Notes**
+
+It is important that any items you do not wish to be sent in a request for quotation be removed from the _RFQ Items Table_. This will not cause the item data to be lost, however, it will
+result in the RFQ Document being generated with only the items in the **RFQ Items Table**, which could then be sent to the selected list of vendors in the _RFQ Vendors Table_.
+
+Likewise, any vendors not selected in the _RFQ Vendors Table_ will not be registered in the database as having received a request for quotation document and thus will
+not be considered by the system for later parts of the process (purchase order and quotation analysis).
+
+**More than one request for quotation can be created for a particular purchase requisition. One request for quotation needs to be completed before another request for quotation can be started.**
+
+#### Form Options
+
+- Create RFQ : The RFQ Document will be generated and will be available for download as well as for sending to the vendors selected.
+- Cancel : This will end the process at this point.
+
+#### Mandatory fields
+
+| Field            | Description                                                                                                                                                                                                           |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Category         | This field is a dropdown listing of all categories that were selected for the various items in the Item Table                                                                                                         |
+| RFQ Vendor Table | This table contains a column which lists all vendors that fall under the category selected. The Vendors selected in this table will be marked in the system as having received a RFQ Document                         |
+| RFQ Items Table  | This table contains a listing of all items with the selected category. Only items that should be generated into a Request for Quotation document to be sent to the selected vendors should be included in this table. |
