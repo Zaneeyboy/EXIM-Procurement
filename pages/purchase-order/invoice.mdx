@@ -1,0 +1,38 @@
+### Invoicing
+
+#### Users
+
+The users with access to this part of the process include Procurement Officers, the requester and possibly managers.
+
+#### Documenting Invoice Details
+
+Once the Vendor is sent the _Purchase Order_ the process is passed over to commence the Invoicing of goods and services requested in the Purchase Order. At this stage, there are five noteworthy fields, listed below, that
+must be populated with data before the process can proceed forward.
+
+| Field                  | Description                                                                                                                                                                                | Mandatory |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
+| Invoice Number         | This is the number attached to the invoice received from the Vendor                                                                                                                        | Yes       |
+| Invoice Date           | The date the invoice was generated                                                                                                                                                         | Yes       |
+| Invoice Table          | This table functions to detail all items received from the Vendor, which will be used later on in the reconciliation process and variance analysis                                         | Yes       |
+| Invoice Document Table | This table functions to store all Invoice documents received by the Vendor, which will be used later on in the reconciliation process to check that what is paid for is what was received. | Yes       |
+| Feedback               | This is a log of any comments, issues or notes that other users of the process later on must be aware of.                                                                                  | Yes       |
+
+**Note:** It is important to note that the information in the Invoice Table must exactly match that detailed in the Invoice Document so that the proper calculations can take place in the background for all necessary operations.
+
+Once all of the information is populated into the mandatory fields, the user now has three(3) options which can be selected:
+
+1. Get Variance Data - Selecting this option assumes that all data entered into the fields is correct, that the invoice information matches that which has been ordered, and the process can proceed without issue to perform variance analysis and the necessary approvals.
+2. Reject Invoice - This option, when selected, indicates that the items received, or the details of the invoice received do not match that which was ordered in the Purchase Order. As a result, selecting this option will direct the process to the Procurement Officer who will review the information pertaining to the Invoice and what was ordered, and then reach out to the Vendor to address the issue.
+3. Cancel - This will terminate the process at this point.
+
+If the _Get Variance Data_ option is selected, the process moves forward to do a variance analysis. This is where the records of the database, referenced by the item data populated in the _Invoice Table_, are retrieved and compared. Through this comparison, calculations
+take place in the background which then populates into several fields in the _Invoice Table_.
+These fields include:
+
+- _Unit Price Variance_
+- _Unit Price Variance %_
+- _Total Cost Variance_
+- _Total Cost Variance %_
+- _Comments_ - This field functions to log a possible reason for any variances occurring in the prices of the Items Ordered and the Items Invoiced.
+
+The user after reviewing this information and making comments, if necessary, to account for the variances, can submit the application by selecting _Send for Approval_. At this stage, the Office of Procurement will now be able to review all of the information and begin the process of reconciliation.

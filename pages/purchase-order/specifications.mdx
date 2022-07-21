@@ -1,0 +1,23 @@
+### Requesting Specifications
+
+When the user requests specifications, they are navigated to a form where several fields must be populated before the process can be sent to the requesting department.
+In particular, the _Changed Item Data Table_ as well as the _Changed Item Details Log_ must be populated before the process can be sent forward to the requesting department for changes to be made.
+
+| Field                    | Description                                                                                                                                                                                                                                                                                                                            | Mandatory |     | Mandatory |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --- | --------- |
+| Changed Item Data Table  | This is a dropdown menu of all items sent in the selected Request for Quotation. For the process to proceed, an item from the list of items must be selected. This selected item will be changed and excluded from later parts of the process.                                                                                         | Yes       |
+| Changed Item Details Log | This is a log of what specifically needs to be changed about the item(s) selected in the _Changed Item Data Table_. Anything noteworthy should be included here so that the requester can make the relevant changes before it sending the process back for approval.                                                                   | Yes       |
+| New Item Details         | This is a table which details what changes have taken place in Item Data. It will only be populated when the requesting department sends control of the process back to the Office of Procurement. All changes here must reflect what is different from the _Purchase Requisition Items_ and the _Selected Vendor Quotation of Items_. | No        |
+
+Once the _Changed Item Data Table_ and the _Changed Item Details Log_ have been populated with data, the user can then select the form option, _Request Technical Specifications_. This will pass control of the process over to the requesting department for the relevant changes to be made in the _New Item Details_ Table.
+
+- At this point, if the form option _Request Technical Specifications_ has been selected, control of the process is now with the requesting department. The requesting department can now review the details from the _Selected Vendor Quotation of Items_, the _Changed Item Details_ table, and the _Changed Item Details_ log and now make the necessary changes in the _New Item Details_ table.
+  Once all changes have been made, the requester can then make note of their changes in the _Changed Item Details Log_, before sending the process forward once more for approval.
+
+- Once the process returns to the Procurement Officer for review, the Procurement Officer would have access to the log of changes, as well as the newly populated _New Item Details_ table, detailing the changes made by the requesting department. At this stage,
+  once all of the information provided is correct, the Procurement Officer can make notes in the _Changed Item Details Log_ of their approval of all changes, and send the process back to the Manager or higher level Procurement Officer for review by selecting the form option, _Submit for Approval_.
+
+The Manager or Higher-level Procurement Officer can then at this stage in the process, select the option, _Create PO_, which will begin the process of adding all of the information populated up to this point
+in the relevant tables of the database. This information will then be retrieved to create the Purchase Order with the changes made, if any, to the item details in the _Changed Item Details_ table and the _New Item Details_ table.
+
+**Note:** Because of the amount of work the system is performing in the background, the browser tab may have to be refreshed several times for the task to appear in the task list on E-Flow. If no task immediately appears after the _Create PO_ opion is selected in the form control, refreshing the page will cause it to appear.

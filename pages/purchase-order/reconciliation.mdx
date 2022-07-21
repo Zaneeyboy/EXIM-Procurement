@@ -1,0 +1,30 @@
+### Invoice Reconciliation
+
+#### Users
+
+Members of the Office of Procurement, Managers, Higher-Level Managers and possibly Finance Officers.
+
+#### The reconciliation process approvals
+
+At this stage of the process, Procurement has read only access to all of the information populated to this point of the process. Once the information has been reviewed,
+Procurement has three(3) options which can be selected from. These include:
+
+1. Submit - Selecting this option assumes that all of the information is acceptable and can therefore be passed along for the various stages of approvals to take place.
+2. Reject - Selecting this option assumes that there is an issue with the items received, and thus, the process will be passed on to another stage where the Invoice is rejected and the Vendor must now be contacted to address the issues.
+3. Cancel - This terminates the process at this point.
+
+Once the option, _Submit_ has been selected, two operations happen internally in the system.
+
+1. The process is passed along to a Manager in the form of a read-only form which they have the ability to review and make note of the entire process up to this point.
+2. The process goes through a variance analysis where, depending on the variance figures obtained in the _Invoice Table_, will send the process to one of three groups of individuals for approval, before it can move forward. These groups include:
+   - Higher-Level Procurement Officers - The process is passed to this group if the highest variance for invoiced items is less than 20% of that which was ordered in the Purchase Order.
+   - Managers - The process is passed to this group if the highest variance for the invoiced items is between 20% and 25% for the items which were ordered in the Purchase Order.
+   - Higher-Level Managers - The process is passed to this group if the highest variance for the invoiced items is greater than 25% for the items which have been ordered in the Purchase Order.
+
+At these approval points, all information previously populated are available in read only format. The Managers and Higher-Level Managers in particular have access to one additional field that differs from what would be seen on the task form for the Higher-Level Procurement Officer. This field is detailed below:
+
+| Field            | Description                                                                                                                                     | Mandatory |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| Manager Comments | Log of comments made by the Managers and Higher-Level Managers of the process to indicate the direction the process should take moving forward. | Yes       |
+
+Once the process has been approved, the process is passed once more to the Procurement Officer and also to the Finance Department.

@@ -1,3 +1,12 @@
 {
-    "index":"Getting Requisition Data"
+    "index":"Getting Requisition Data",
+    "analysis":"Starting a Quotation Analysis",
+    "specifications":"Requesting Specifications",
+    "po":"Creating a Purchase Order",
+    "invoice":"Invoicing",
+    "reconciliation":"Reconciling the Invoice",
+    "reject":"Rejecting the Invoice",
+    "payment":"Completing Payment for the Invoice",
+    "await":"Ending the Process or Awaiting More Invoices"
+
 }

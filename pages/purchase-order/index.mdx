@@ -1,1 +1,44 @@
-Purchase Order
+# Purchase Order Process Documentation
+
+### Users
+
+All Procurement Officers with access to E-Flow should have access to initiate this process and have the ability to create a purchase order.
+
+### Starting a Purchase Order
+
+When the process is initiated, the user is navigated to a task form with the following field:
+
+| Field     | Description                                                                                  | Mandatory |
+| --------- | -------------------------------------------------------------------------------------------- | --------- |
+| PR Number | Dropdown menu of Purchase Requisition Numbers, their dates and the reason for their creation | Yes       |
+
+After populating the field and submitting, the user is navigated to a form with two fields:
+
+| Field                    | Description                                                                                                                                         | Mandatory |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| PR Number                | Dropdown menu of Purchase Requisition Numbers, their dates and the reason for their creation that currently are still open                          | No        |
+| Request for Quotation ID | Dropdown menu of IDs for all Request for Quotations that have been created for the chosen Purchase Requisition Number selected which are still open | Yes       |
+
+After selecting a _Request for Quotation ID_ from the dropdown field and selecting the option to _Get Purchase Requisition Data_ the system will retrieve all data regarding
+the purchase requisition as well as the item data and vendor data for the _Request for Quotation_ we selected previously. The fields below are shown at this stage on the task form:
+
+| Field                       | Description                                                                                                                                                                                                                  | Mandatory |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| Purchase Requisition Number | The selected purchase requisition number                                                                                                                                                                                     | No        |
+| Date of Requisition         | Date the purchase requisition was created                                                                                                                                                                                    | No        |
+| Requester                   | Person who initiated the purchase requisition                                                                                                                                                                                | No        |
+| Department                  | Requesting person's department                                                                                                                                                                                               | No        |
+| Date required               | Date by which all relevant quotations from vendors should have been received                                                                                                                                                 | No        |
+| Reason for request          | Purpose of purchase requisition                                                                                                                                                                                              | No        |
+| Account Number              | Account from which funds will be deducted from to handle payments                                                                                                                                                            | No        |
+| Operating Expenses:Budgeted | Options to indicate if this expense has been catered for in the budget allocations                                                                                                                                           | No        |
+| Procurement Officer         | Procurement Officer who approved the purchase requisition previously                                                                                                                                                         | No        |
+| Purchase Requisition Items  | A table with a listing of all items that were selected and sent as part of the request for quotation selected. This may not include every item in the purchase requisition as a RFQ may be sent with only a subset of items. | No        |
+| Quotation Review Table      | A table that captures all quotations submitted by the deadline from the listing of vendors that were selected to received the _Request for Quotation_ selected                                                               | Yes       |
+
+Once we review the information and confirm that the data populated into the fields is correct, we can proceed to populate the _Quotation Review Table_. This table
+captures both quotation documents as well as the vendor responsible for the quotation submission in the document in the table. It is important to note that only vendors who were selected to receive the request for quotation
+selected in this process will have their names show up in the dropdown menu of vendors in the _Quotation Review Table_.
+
+Once this table is populated, the user may proceed by selecting the form option to _Get Quotation Details_. Otherwise, should the wrong Purchase Requisition Number, or Request for Quotation ID be selected,
+the user may at this point select the option _Get different Purchase Requisition Data_ to return once more to select a Purchase Requisition Number from the active listing and a Request fo Quotation ID.

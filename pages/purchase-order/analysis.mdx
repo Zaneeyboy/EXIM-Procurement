@@ -1,0 +1,48 @@
+### Starting a Quotation Analysis
+
+#### Getting Started
+
+The system is built to handle up to 10 quotations for the quotation analysis. Depending on the number of quotations entered in the _Quotation Review Table_ (Max 10), a number of different sections
+will be displayed on the corresponding task form (Max 10). Each of these sections will contain two fields in particular that the user must populate with data:
+
+| Field            | Description                                                                                                                                                                       | Mandatory |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| Vendor           | Dropdown menu of vendors that were sent the selected request for quotation                                                                                                        | Yes       |
+| Vendor Quotation | This is a table that seeks to capture all information pertaining to the items listed on the _Vendor Quotation Document_ submitted for the vendor in the _Vendor Quotation Table_. | Yes       |
+
+It is important to note that the Vendor selected in a particular section must reflect the data entered in the _Vendor Quotation_ table for that section as this will be used to populate not only the database records with
+the relevant data, but will also be used for preparation of the purchase order and other major parts of the _Purchase Order Process_.
+
+Once the relevant fields have been populated with data, the form option _Send for Analysis_ can be selected. Once this is selected, the user is navigated to another form where all fields pertaining to the
+quotation analysis are made available to be populated. These fields include:
+
+| Field                     | Description                                                                                                                                                                            | Mandatory |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| Quotation Analysis Number | A unique ID for this newly created Quotation Analysis that is automatically generated and assigned by the system.                                                                      | No        |
+| Quotation Analysis Date   | Date of the quotation analysis                                                                                                                                                         | No        |
+| Selected Company's Offer  | A dropdown of 10 options from which the user selects the Quotation Number corresponding to the quotation data populated on the task form itself.                                       | Yes       |
+| Selection Rationale       | Checkboxes of the different criteria that influenced a user's choice when selecting one quotation from the list of available quotations to proceed with creation of the purchase order | Yes       |
+| Payment Terms             | The payment terms of the vendor selected from the Quotation Analysis                                                                                                                   | Yes       |
+| Evaluated By              | The name of the individual preparing the Quotation Analysis which is automatically extracted and populated into the field by the system                                                | No        |
+| Comments                  | A log of any notes or comments regarding this quotation analysis that will be available for all users throughout the remainder of the process                                          | Yes       |
+
+Once all the mandatory fields have been populated, the user can then _Submit_ the form, which would at this point, end the Quotation Analysis and move forward for review. At this stage, a Manager or Procurement Officer
+would review all the data in the process at this point in time and make one of four (4) choices regarding the next steps of the process.
+
+1. _Select Another Offer_ - If this option is selected, the user will go back through the process of conducting the Quotation Analysis, before submitting once again for review.
+2. _Create PO_ - If this option is selected, it is assumed that all information at this point in time is correct and the process can move forward to begin creation of the Purchase Order.
+3. _Request Specifications_ If this option is selected, the user is navigated to a form that will detail the changes to the item data in the _Selected Vendor Quotation of Items_ to send forward for the Purchase Order.
+4. Cancel - Terminates the process at this point.
+
+The noteworthy fields available at this point of the process include:
+
+| Field                              | Description                                                                                                                                                                                                                                      | Mandatory |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
+| Vendor Name                        | The Vendor Name which is automatically pulled from the Quotation selected in the _Quotation Analysis_                                                                                                                                            | No        |
+| Selected Vendor Quotation of Items | Item details of the information populated in the selected quotation                                                                                                                                                                              | No        |
+| Changed Item Data Table            | This table details which item in the _Purchase Requisition Items Table_ has to change to accommodate that which is shown on the _Selected Vendor Quotation of Items_ Table. At this point, it is read only.                                      | No        |
+| New Item Details                   | This table details the new item data that will be added to the database in order to proceed with creation of the Purchase Order Table. At this point, this field is read only.                                                                   | No        |
+| Changed Item Details Log           | This field acts as a log to document the back and forth communication between the Procurement Officer and the Requesting Department to accommodate the requested changes on the items. This log is available at all stages later in the process. | No        |
+
+**Note:** At this stage of the process, specifications may be requested in an instance where the information in the _Selected Vendor Quotation of Items_ differs from the information supplied in the _Purchase Requisition
+Items_ Table. This will enable the necessary changes to be made before proceeding forward as the Purchase Order cannot be created with the appropriate data if the information in both tables in inconsistent.

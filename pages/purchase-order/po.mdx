@@ -1,0 +1,58 @@
+### Creating a Purchase Order
+
+At this stage of the process, details of the Purchase Order are being populated on the task form. A listing of the fields at this point is provided below:
+
+| Field                    | Description                                                                                                                                                      | Mandatory |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| PO Number                | Unique ID generated and assigned to each Purchase Order automatically                                                                                            | No        |
+| PO Date                  | Date the purchase order was started                                                                                                                              | No        |
+| Recipient Name           | Name of contact person from the Vendor receiving the Purchase Order                                                                                              | No        |
+| Recipient Company        | Vendor receiving the Purchase Order                                                                                                                              | No        |
+| Recipient Street Address | Address of Vendor                                                                                                                                                | No        |
+| Recipient City           | City of location of Vendor                                                                                                                                       | No        |
+| Recipient Phone Number   | Vendor's contact                                                                                                                                                 | No        |
+| Recipient Email Address  | Vendor's Email Address                                                                                                                                           | No        |
+| Purchaser Name           | Individual responsible for placing the purchase order                                                                                                            | Yes       |
+| Purchase Company         | EXIM Bank                                                                                                                                                        | No        |
+| Purchaser Street Address | EXIM's Address                                                                                                                                                   | No        |
+| Purchaser City           | EXIM's city of location                                                                                                                                          | No        |
+| Purchaser Phone Number   | EXIM's contact for vendors                                                                                                                                       | No        |
+| Purchaser Email Address  | EXIM's email address for handling Purchase Orders                                                                                                                | No        |
+| Shipped Via              | Method of Shipment                                                                                                                                               | No        |
+| FOB Point                | FOB Point                                                                                                                                                        | No        |
+| Payment Terms            | Selected Vendor's Payment Terms                                                                                                                                  | No        |
+| Purchase Order Table     | List of items that will be generated and sent in the Purchase Order Document                                                                                     | Yes       |
+| Vendor Name              | Selected Vendor's Company Name                                                                                                                                   | No        |
+| Evaluated By             | Procurement Officer responsible for the Quotation Analysis                                                                                                       | No        |
+| Date Signed              | Date the Purchase Order details have been completed and approved                                                                                                 | Yes       |
+| Authorized By            | Person responsible for creating the Purchase Order                                                                                                               | Yes       |
+| Signature                | Digital Signature of person responsible for creating the Purchase Order                                                                                          | Yes       |
+| Purchase Order Comments  | Log of comments made by individuals regarding what needs to be changed in the Purchase Order's details before it can be approved and sent to the selected Vendor | No        |
+
+Once all mandatory fields have been populated, the information on the form has been reviewed and any changes that need to be addressed as mentioned in the _Purchase Order Comments_ log field have been made, the
+Procurement Officer can then select _Submit for Approval_. This will pass control of the process on to a Higher-Level Manager or Procurement Officer for their approval before the Purchase Order document is generated.
+Depending on the cost of the Purchase Order, this part of the process can be sent to one of three levels of Approvers:
+
+1. With a total cost of less than **\$10,000.00**, the Purchase Order will be passed on to a Higher-Level Procurement Officer for approval.
+2. With a total cost between **\$10,000.00** and **\$15,000.00** , the Purchase Order will be passed on to a Manager for approval.
+3. With a total cost greater than **\$15,000.00** , the Purchase Order will be passed on to the Higher-Level Managers (C-Rank Managers) for approval.
+
+At each of the approval stages listed above, the approver can reject the Purchase Order with comments for changes to be made before it proceeds forward for approval once again. However, if the Purchase Order's details
+have been approved, the _Purchase Order Document_ is generated which can then be sent to the selected vendor.
+
+#### Sending the Purchase Order To Vendors
+
+When the Purchase Order document is generated, the Procurement Officer at this stage has two options:
+
+1. _Email Purchase Order_ - If this option is selected, the user is navigated to a task form with several noteworthy fields. The fields must be populated before an email containing the _Purchase Order Document_ as an attachment can be sent out to the selectd Vendor.
+
+| Field         | Description                                                                                                           | Mandatory |
+| ------------- | --------------------------------------------------------------------------------------------------------------------- | --------- |
+| Vendor Email  | Selected Vendor's Email Address                                                                                       | Yes       |
+| Email Subject | Subject of the email that will be sent to the selected Vendor with the _Purchase Order Document_                      | Yes       |
+| Email CC      | CC of email that will be sent to selected vendor                                                                      | Yes       |
+| Email Body    | This s the message that will be sent to the selected Vendor along with the _Purchase Order Document_ as an attachment | Yes       |
+
+2. _Manually Submit Purchase Order_ - If this option is selected, it is assumed that the _Purchase Order Document_ will be downloaded, printed and given to the Vendor manually
+
+Once an option is selected, the process proceeds to _Invoicing_ where it now awaits invoices from the selected vendor along with the receipt of goods.
